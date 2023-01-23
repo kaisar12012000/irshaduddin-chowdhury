@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(ellipse at bottom, #0d1e31, #111);
+  overflow: hidden;
+}
+
+.header {
+  align-items: center;
+  justify-content: center;
+}
+.sky {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: rotateZ(45deg);
+  z-index: 0;
+}
+
+.intro {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  color: #FFF;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  margin-top: 20px;
+  top: 50%;
+  height: 4px;
+  background: linear-gradient(-45deg, #5F91FF, rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px #699BFF);
+  animation: tail 3s ease-in-out infinite,
+             falling 3s ease-in-out infinite;
+}
+
+@keyframes tail {
+    0%{
+      width: 0px;
+    }
+    30%{
+      width: 100px;
+    }
+    100%{
+      width: 0;
+    }
+}
+
+@keyframes falling {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100vw);
+  }
+}
+
+.star::before, .star::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 0;
+  height: 5px;
+  width: 30px;
+  background: linear-gradient(-45deg, rgba(0,0,255,0), #5f91ff,rgba(0,0,255,0));
+  border-radius: 100%;
+  /* transform: translate(50%) rotateZ(45deg); */
+}
+.star:nth-child(1) {
+  top: 0;
+  left: 0;
+  animation-delay: 1.2s;
+}
+.star:nth-child(2){
+  top: 300px;
+  left: 80px;
+  right: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+.star:nth-child(3){
+  top: 80px;
+  left: 0px;
+  right: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+.star:nth-child(4){
+  top: 0px;
+  left: 400px;
+  right: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+.star:nth-child(5){
+  top: 610px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1s;
+  animation-duration: 2.5s;
+}
+.star:nth-child(6){
+  top: 800px;
+  left: 20px;
+  right: initial;
+  animation-delay: 1.2s;
+  animation-duration: 2.8s;
+}
+.star:nth-child(7){
+  top: 180px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.4s;
+  animation-duration: 3s;
+}
+.star:nth-child(8){
+  top: 200px;
+  left: 30px;
+  right: initial;
+  animation-delay: 1.6s;
+  animation-duration: 3.1s;
+}
+.star:nth-child(9){
+  top: 100px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.8s;
+  animation-duration: 3.4s;
+}
+.star:nth-child(10){
+  top: 160px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.4s;
+  animation-duration: 2.25s;
+}
+.star:nth-child(11){
+  top: 109px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1s;
+  animation-duration: 3.6s;
+}
+.star:nth-child(12){
+  top: 580px;
+  left: 0px;
+  right: initial;
+  animation-delay: .4s;
+  animation-duration: 3.2s;
+}
+.star:nth-child(13){
+  top: 620px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.2s;
+  animation-duration: 3.42s;
+}
+.star:nth-child(14){
+  top: 700px;
+  left: 0px;
+  right: initial;
+  animation-delay: 2s;
+  animation-duration: 2s;
+}
+.star:nth-child(15){
+  top: 450px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.4s;
+  animation-duration: 2.2s;
+}
+.star:nth-child(16){
+  top: 400px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.6s;
+  animation-duration: 2.6s;
+}
+.star:nth-child(17){
+  top: 490px;
+  left: 50px;
+  right: initial;
+  animation-delay: 1.4s;
+  animation-duration: 2s;
+}
+.star:nth-child(18){
+  top: 380px;
+  left: 20px;
+  right: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+.star:nth-child(19){
+  top: 410px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.4s;
+  animation-duration: 2s;
+}
+.star:nth-child(20){
+  top: 350px;
+  left: 0px;
+  right: initial;
+  animation-delay: 1.8s;
+  animation-duration: 2s;
+}
+.h1 {
+  font-size: 2.5em;
+  font-weight: 800;
+}
+.h2 {
+  font-size: 2em;
+  font-weight: 700;
+}
+#post-header {
+  position: absolute;
+  top: 100vh
+}
